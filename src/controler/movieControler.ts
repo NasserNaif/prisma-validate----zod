@@ -21,10 +21,8 @@ export const getMovie = async (req: Request, res: Response) => {
 // post
 export const postMovie = async (req: Request, res: Response) => {
   try {
-    const newMovie = req.body as movie;
-    await prisma.movie.create({
-      data: newMovie,
-    });
+    const newMovie = req.body as MovieType;
+    await prisma.movie.create({ data: newMovie });
     return res.status(201).json({
       message: "movie Added !",
     });

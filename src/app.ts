@@ -6,6 +6,8 @@ import movieRouter from "./Routes/movieRouter";
 
 const app = express();
 
+app.use(express.json());
+
 connectDB();
 
 app.use(`/contact`, contactRoute);

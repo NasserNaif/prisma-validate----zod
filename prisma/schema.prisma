@@ -17,6 +17,7 @@ model movie{
   genre genreMovie
   duration Int
   rating Int 
+  createDate DateTime @default(now())
 }
 
 enum genreMovie {

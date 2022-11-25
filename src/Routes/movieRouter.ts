@@ -13,6 +13,7 @@ const movieRouter = express.Router();
 
 movieRouter.get(`/`, getMovie);
 movieRouter.post(`/`, validate(movieSchema), postMovie);
-
+movieRouter.put(`/:id`, validate(movieSchema), updateMovie);
+movieRouter.delete(`/:id`, deleteMovie);
 
 export default movieRouter;

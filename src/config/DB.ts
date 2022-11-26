@@ -1,9 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 
-const prisma = new PrismaClient({
-  log: ["query", "error", "warn"],
-  errorFormat: "pretty",
-});
+const prisma = new PrismaClient();
 
 const connectDB = () => {
   try {

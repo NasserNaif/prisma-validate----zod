@@ -18,8 +18,23 @@ model movie {
   createDate DateTime   @default(now())
 }
 
+model Users {
+  id          String @id @default(uuid())
+  username    String
+  password    String
+  email       String @unique
+  role        Role
+  joiningYear String
+  age         Int
+}
+
 enum genreMovie {
   Drama
   Action
   Comedy
+}
+
+enum Role {
+  User
+  Admin
 }

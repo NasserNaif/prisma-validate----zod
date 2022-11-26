@@ -3,6 +3,7 @@ import {
   deleteMovie,
   getmmovieGenre,
   getmmovieName,
+  getmmovieRating,
   getMovie,
   postMovie,
   updateMovie,
@@ -29,5 +30,8 @@ movieRouter.get(`/name/:name`, getmmovieName);
 
 // get movie by genre
 movieRouter.get(`/genre/:genre`, getmmovieGenre);
+
+// get movie by rating 
+movieRouter.get(`/rating/:rate`,getmmovieRating)
 
 export default movieRouter;

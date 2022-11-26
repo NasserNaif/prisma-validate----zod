@@ -15,7 +15,7 @@ app.use(`/contact`, contactRoute);
 
 app.use(`/movies`, movieRouter);
 
-app.use(`/user`,userRouter)
+app.use(`/user`, userRouter);
 
 app.listen(5000, () => {
   console.log("we running in port 5000 now ");

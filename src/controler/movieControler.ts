@@ -116,3 +116,23 @@ export const getmmovieGenre = async (req: Request, res: Response) => {
     });
   }
 };
+
+
+export const getmmovieRating = async (req: Request, res: Response) => {
+  const  rating  = Number(req.params);
+  
+  try {
+    
+    const movieName = await prisma.movie.findMany({
+    select:{rating} as any
+    })
+
+    return res.status(200).json(movieName);
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({
+      message: "server Error !",
+    });
+  }
+};
